@@ -48,9 +48,6 @@ class SpatieLaravelSettingsPluginServiceProvider extends ServiceProvider
             $aliases[] = $class;
         }
 
-        return [
-            ...$commands,
-            ...$aliases,
-        ];
+        return array_merge($commands, $aliases);
     }
 }
