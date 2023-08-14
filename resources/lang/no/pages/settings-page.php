@@ -7,7 +7,7 @@ return [
         'actions' => [
 
             'save' => [
-                'label' => 'Tallenna',
+                'label' => 'Lagre endringer',
             ],
 
         ],
@@ -17,7 +17,7 @@ return [
     'notifications' => [
 
         'saved' => [
-            'title' => 'Tallennettu',
+            'title' => 'Lagret',
         ],
 
     ],
