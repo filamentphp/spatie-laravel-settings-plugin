@@ -14,12 +14,8 @@ return [
 
     ],
 
-    'notifications' => [
-
-        'saved' => [
-            'title' => 'Pengaturan berhasil disimpan',
-        ],
-
+    'messages' => [
+        'saved' => 'Pengaturan berhasil disimpan',
     ],
 
 ];

@@ -14,12 +14,8 @@ return [
 
     ],
 
-    'notifications' => [
-
-        'saved' => [
-            'title' => 'Kaydedildi',
-        ],
-
+    'messages' => [
+        'saved' => 'Kaydedildi',
     ],
 
 ];
