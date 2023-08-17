@@ -14,12 +14,8 @@ return [
 
     ],
 
-    'notifications' => [
-
-        'saved' => [
-            'title' => '保存しました',
-        ],
-
+    'messages' => [
+        'saved' => '保存しました',
     ],
 
 ];

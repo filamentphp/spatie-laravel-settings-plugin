@@ -14,12 +14,8 @@ return [
 
     ],
 
-    'notifications' => [
-
-        'saved' => [
-            'title' => 'সংরক্ষিত হয়েছে',
-        ],
-
+    'messages' => [
+        'saved' => 'সংরক্ষিত হয়েছে',
     ],
 
 ];
