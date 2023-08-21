@@ -4,7 +4,6 @@ namespace {{ namespace }};
 
 use App\Settings\{{ settingsClass }};
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Pages\SettingsPage;
 
 class {{ class }} extends SettingsPage
@@ -13,11 +12,10 @@ class {{ class }} extends SettingsPage
 
     protected static string $settings = {{ settingsClass }}::class;
 
-    public function form(Form $form): Form
+    protected function getFormSchema(): array
     {
-        return $form
-            ->schema([
-                // ...
-            ]);
+        return [
+            // ...
+        ];
     }
 }
