@@ -7,7 +7,7 @@ return [
         'actions' => [
 
             'save' => [
-                'label' => 'Lưu thay đổi',
+                'label' => 'परिवर्तनहरू सुरक्षित गर्नुहोस',
             ],
 
         ],
@@ -17,7 +17,7 @@ return [
     'notifications' => [
 
         'saved' => [
-            'title' => 'Đã lưu',
+            'title' => 'सुरक्षित गरियो',
         ],
 
     ],
