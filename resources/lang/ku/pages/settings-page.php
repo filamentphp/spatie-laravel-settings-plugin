@@ -7,19 +7,15 @@ return [
         'actions' => [
 
             'save' => [
-                'label' => 'نوێکردنەوە',
+                'label' => 'هەڵگرتنی گۆڕانکارییەکان',
             ],
 
         ],
 
     ],
 
-    'notifications' => [
-
-        'saved' => [
-            'title' => 'نوێکرایەوە',
-        ],
-
+    'messages' => [
+        'saved' => 'پاشەکەوت کرا',
     ],
 
 ];

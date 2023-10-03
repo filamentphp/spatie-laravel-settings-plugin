@@ -7,19 +7,15 @@ return [
         'actions' => [
 
             'save' => [
-                'label' => 'Lưu thay đổi',
+                'label' => 'Lưu lại',
             ],
 
         ],
 
     ],
 
-    'notifications' => [
-
-        'saved' => [
-            'title' => 'Đã lưu',
-        ],
-
+    'messages' => [
+        'saved' => 'Đã lưu',
     ],
 
 ];

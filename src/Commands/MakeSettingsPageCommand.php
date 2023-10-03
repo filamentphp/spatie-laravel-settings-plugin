@@ -3,13 +3,13 @@
 namespace Filament\Commands;
 
 use Filament\Support\Commands\Concerns\CanManipulateFiles;
+use Filament\Support\Commands\Concerns\CanValidateInput;
 use Illuminate\Console\Command;
-
-use function Laravel\Prompts\text;
 
 class MakeSettingsPageCommand extends Command
 {
     use CanManipulateFiles;
+    use CanValidateInput;
 
     protected $description = 'Create a new Filament settings page class';
 
@@ -17,11 +17,7 @@ class MakeSettingsPageCommand extends Command
 
     public function handle(): int
     {
-        $page = (string) str($this->argument('name') ?? text(
-            label: 'What is the page name?',
-            placeholder: 'ManageFooter',
-            required: true,
-        ))
+        $page = (string) str($this->argument('name') ?? $this->askRequired('Page name (e.g. `ManageFooter`)', 'name'))
             ->trim('/')
             ->trim('\\')
             ->trim(' ')
@@ -31,11 +27,7 @@ class MakeSettingsPageCommand extends Command
             (string) str($page)->beforeLast('\\') :
             '';
 
-        $settingsClass = (string) str($this->argument('settingsClass') ?? text(
-            label: 'What is the settings name?',
-            placeholder: 'FooterSettings',
-            required: true,
-        ))
+        $settingsClass = (string) str($this->argument('settingsClass') ?? $this->askRequired('Settings class (e.g. `FooterSettings`)', 'settings class'))
             ->trim('/')
             ->trim('\\')
             ->trim(' ');
