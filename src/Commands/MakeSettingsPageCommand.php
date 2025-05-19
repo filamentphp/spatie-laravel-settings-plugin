@@ -72,7 +72,7 @@ class MakeSettingsPageCommand extends Command
             new InputArgument(
                 name: 'settings',
                 mode: InputArgument::OPTIONAL,
-                description: 'The name of the settings class within the settings directory or fully qualified',
+                description: 'The name of the settings class within the settings directory or fully-qualified',
             ),
         ];
     }
@@ -178,7 +178,7 @@ class MakeSettingsPageCommand extends Command
         );
 
         $this->settingsFqn = suggest(
-            label: 'What is the fully qualified class name of the settings class?',
+            label: 'What is the settings class?',
             options: function (?string $search) use ($settingsFqns): array {
                 if (blank($search)) {
                     return $settingsFqns;
@@ -189,13 +189,14 @@ class MakeSettingsPageCommand extends Command
                 return array_filter($settingsFqns, fn (string $modelFqn): bool => str($modelFqn)->replace(['\\', '/'], '')->contains($search, ignoreCase: true));
             },
             placeholder: 'App\\Settings\\SiteSettings',
+            hint: 'Please provide the fully-qualified class name.',
         );
     }
 
     protected function configureIsGenerated(): void
     {
         $this->isGenerated = $this->option('generate') || confirm(
-            label: 'Would you like to generate the form schema based on the properties of the settings class?',
+            label: 'Should the form schema be generated from the properties of the settings class?',
             default: false,
         );
     }
